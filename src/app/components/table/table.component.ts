@@ -1,7 +1,7 @@
-import {ChangeDetectionStrategy, Component, Input, OnInit} from '@angular/core';
-import memo from "memo-decorator";
-import {IData, MinutesStep} from "../../interfaces";
-import {generateDataSeriesForOneMonth, generateMinutesSeries, transformDataToEntities} from "../../utils";
+import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
+import memo from 'memo-decorator';
+import { IData, MinutesStep } from '../../interfaces';
+import { generateDataSeriesForOneMonth, generateMinutesSeries, transformDataToEntities } from '../../utils';
 
 @Component({
   selector: 'app-table',
@@ -18,7 +18,7 @@ export class TableComponent implements OnInit {
 
   private data: IData[];
 
-  @Input() set currentMinutesStep(value: MinutesStep){
+  @Input() set currentMinutesStep(value: MinutesStep) {
     this.changeHeaders(value);
   };
 

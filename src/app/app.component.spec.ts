@@ -1,36 +1,24 @@
-import { AppComponent } from './app.component';
-import { Spectator } from "@ngneat/spectator";
-import { createComponentFactory } from "@ngneat/spectator/jest";
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { AppComponent } from "./app.component";
 
-  describe('AppComponent', () => {
-    let spectator: Spectator<AppComponent>;
-    const createComponent = createComponentFactory({
-      shallow: true,
-      component: AppComponent
-    });
+describe('AppComponent', () => {
+  let component: AppComponent;
+  let fixture: ComponentFixture<AppComponent>;
 
-    it('should create', () => {
-      spectator = createComponent();
-      expect(spectator.component).toBeTruthy();
-    });
-
-
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
+      declarations: [ AppComponent ]
+    })
+      .compileComponents();
   });
-  // it('should create the app', () => {
-  //   const fixture = TestBed.createComponent(AppComponent);
-  //   const app = fixture.componentInstance;
-  //   expect(app).toBeTruthy();
-  // });
-  //
-  // it(`should have as title 'grid-table'`, () => {
-  //   const fixture = TestBed.createComponent(AppComponent);
-  //   const app = fixture.componentInstance;
-  //   expect(app.title).toEqual('grid-table');
-  // });
-  //
-  // it('should render title', () => {
-  //   const fixture = TestBed.createComponent(AppComponent);
-  //   fixture.detectChanges();
-  //   const compiled = fixture.nativeElement as HTMLElement;
-  //   expect(compiled.querySelector('.content span')?.textContent).toContain('grid-table app is running!');
-  // });
+
+  beforeEach(() => {
+    fixture = TestBed.createComponent(AppComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
+
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
+});

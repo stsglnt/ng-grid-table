@@ -2,7 +2,6 @@
  * Iterates over one day and creates an array of minutes
  */
 export const generateMinutesSeries = (step: 5 | 30 | 60): string[] => {
-  console.log('calculated minutes')
   const day = new Date(1970, 0, 1);
   const results = [];
   while (day.getDate() === 1) {

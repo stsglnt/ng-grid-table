@@ -1,4 +1,4 @@
 export interface IData {
   value: string,
-  date: number // unixtime in milliseconds
+  date: number // unix timestamp in milliseconds
 }

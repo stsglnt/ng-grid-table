@@ -1,6 +1,6 @@
-import {ChangeDetectionStrategy, Component, EventEmitter, OnInit, Output} from '@angular/core';
-import {FormControl} from "@angular/forms";
-import {IMinutesStepSelectOption, MinutesStep} from "../../interfaces";
+import { ChangeDetectionStrategy, Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { FormControl } from '@angular/forms';
+import { IMinutesStepSelectOption, MinutesStep } from '../../interfaces';
 
 @Component({
   selector: 'app-selector',
@@ -27,7 +27,4 @@ export class SelectorComponent implements OnInit {
     ]
   }
 
-  onFieldChange(event: any) {
-    console.log('event', event)
-  }
 }
