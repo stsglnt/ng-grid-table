@@ -14,20 +14,6 @@ import { createComponentFactory } from "@ngneat/spectator/jest";
       expect(spectator.component).toBeTruthy();
     });
 
-    it('should sort the array', () => {
-      spectator = createComponent({detectChanges: false});
-      const dummyData = [
-        {date: 1000},
-        {date: 4},
-        {date: 500},
-      ] as any
-      const expectedResult = [
-        {date: 4},
-        {date: 500},
-        {date: 1000}
-      ]
-      expect(spectator.component.sortData(dummyData)).toEqual(expectedResult);
-    })
 
   });
   // it('should create the app', () => {

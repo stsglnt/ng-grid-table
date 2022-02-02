@@ -1,0 +1,11 @@
+<div class="flex flow-column mb-4">
+  <mat-form-field appearance="fill" class="w-full">
+    <mat-label>Date interval: </mat-label>
+    <mat-select [formControl]="stepControl" (selectionChange)="selectionChange.emit($event.value)">
+      <mat-option
+        *ngFor="let headerOption of selectorOptions" [value]="headerOption.value">
+        {{headerOption?.label}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>

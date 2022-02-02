@@ -1,0 +1,19 @@
+<div class="mt-8 shadow  bg-white">
+  <div class="min-w-full">
+    <cdk-virtual-scroll-viewport orientation="vertical" itemSize="68" class="h-160">
+      <div class="header table-grid ">
+        <div *ngFor="let header of headers" class="bg-gray-400 p-6 text-md flex justify-center items-center color-white">{{header}}</div>
+      </div>
+      <ng-container *cdkVirtualFor="let data of dataWithKeys | keyvalue; trackBy: trackByFn">
+        <div class="table-grid">
+          <div class="text-sm p-6 flex justify-center items-center">
+            {{data?.key | formatDate}}
+          </div>
+          <div *ngFor="let minuteStep of minutesSteps" class="text-sm p-6 flex justify-center items-center">
+            {{data?.value?.[minuteStep]?.value}}
+          </div>
+        </div>
+      </ng-container>
+    </cdk-virtual-scroll-viewport>
+  </div>
+</div>
