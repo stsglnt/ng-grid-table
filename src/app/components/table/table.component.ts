@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
-import memo from 'memo-decorator';
 import { IData, MinutesStep } from '../../interfaces';
 import { generateDataSeriesForOneMonth, generateMinutesSeries, transformDataToEntities } from '../../utils';
+import memo from 'memo-decorator';
 
 @Component({
   selector: 'app-table',
@@ -10,7 +10,7 @@ import { generateDataSeriesForOneMonth, generateMinutesSeries, transformDataToEn
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class TableComponent implements OnInit {
-  public dataWithKeys: ReadonlyMap<any, any>;
+  public dataWithKeys: ReadonlyMap<string, Record<string, IData>>;
   // used for table headers (has 'Day' in it)
   public headers: string[];
   // for iterating over data and showing corresponded one
