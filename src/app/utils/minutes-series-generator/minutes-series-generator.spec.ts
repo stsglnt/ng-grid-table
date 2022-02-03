@@ -1,4 +1,4 @@
-import {generateMinutesSeries} from "./minutes-series-generator";
+import { generateMinutesSeries } from './minutes-series-generator';
 
 describe('MinutesSeriesGenerator', () => {
 

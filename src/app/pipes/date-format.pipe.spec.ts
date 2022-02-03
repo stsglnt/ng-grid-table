@@ -1,4 +1,4 @@
-import {FormatDatePipe} from "./date-format.pipe";
+import { FormatDatePipe } from './date-format.pipe';
 
 describe('DateFormatPipe', () => {
 

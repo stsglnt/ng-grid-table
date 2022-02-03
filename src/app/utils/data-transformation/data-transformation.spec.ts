@@ -1,4 +1,4 @@
-import {transformDataToEntities} from "./data-transformation";
+import { transformDataToEntities } from './data-transformation';
 
 describe('Data transformation', () => {
 
